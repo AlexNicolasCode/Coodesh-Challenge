@@ -103,7 +103,7 @@ export default function Home({ firstClients }) {
   return (
     <div>
       <Head>
-        <title>Coodesh Challenge</title>
+        <title>Pharma Inc - Clients</title>
       </Head>
 
       <main className="d-flex justify-content-center">
