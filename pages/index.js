@@ -160,7 +160,7 @@ export default function Home({ firstClients }) {
         </section>
       </main>
 
-      <footer className="d-flex text-center">
+      <footer className="text-center mt-2">
         Developed by Alex Nicolas
       </footer>
     </div>
