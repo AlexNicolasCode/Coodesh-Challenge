@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pharma Inc - Coodesh Challenge
+## Presentation
+Pharma Inc is a fictitious pharmacy company that needs a system to view its customer list. For this, this project was created that requests data from customers via the Random.me API and exposes the data on the page.
+
+This project is a challenge by codesh and is intended to test my knowledge.
 
 ## Getting Started
 
@@ -10,25 +14,36 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to install
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This app used "create-next-app" in you build. To install it, use:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+  npx create-next-app pharma-inc
+  # or
+  yarn create next-app pharma-inc
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To install all dependencies:
 
-## Learn More
+```bash
+  npm install axios bootstrap dayjs
+  # or
+  yarn add axios bootstrap dayjs
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Stacks
+- NextJS
+- ReactJS
+- Bootstrap
+- Axios
+- DayJS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API
+- Random.me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+- Filter by name or nationality
+- Filber by gender
+- Button to get more clients at API
+- View details of a client
