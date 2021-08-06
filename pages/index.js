@@ -11,6 +11,7 @@ export default function Home({ firstClients }) {
   const [clientSelected, setClientSelected] = useState([])
   const [input, setInput] = useState("");
   const [status, setStatus] = useState("all");
+  const [pagination, setPagination] = useState(2)
 
   useEffect(() => {
     return filterByName()
@@ -91,9 +92,10 @@ export default function Home({ firstClients }) {
   };
 
   const getMoreClients = async () => {
-    const { data } = await api.get('?results=50&exc=registered,login,cell');
+    const { data } = await api.get(`?page=${pagination.toString()}&results=50&exc=registered,login,cell&seed=abc`)
     const newClients = data.results;
-
+    
+    setPagination(pagination + 1)
     setAllClients([...allClients, ...newClients]);
     setClients([...clients, ...newClients]);
   };
@@ -156,7 +158,7 @@ export default function Home({ firstClients }) {
             </tbody>
           </table>
 
-          <button className="btn btn-dark mt-2" onClick={getMoreClients}>More</button>
+          <button className="btn btn-dark mt-2" onClick={getMoreClients}>Loading More</button>
         </section>
       </main>
 
@@ -168,7 +170,7 @@ export default function Home({ firstClients }) {
 }
 
 export const getStaticProps = async () => {
-  const { data } = await api.get('?results=50&exc=registered,login,cell')
+  const { data } = await api.get('?page=1&results=50&exc=registered,login,cell&seed=abc')
   const firstClients = data.results
 
   return {
